@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Hetuv21/hv-prot.git%20/static/css/main.fd2d455b.css",
-    "main.js": "/Hetuv21/hv-prot.git%20/static/js/main.4bc8d4ce.js",
-    "index.html": "/Hetuv21/hv-prot.git%20/index.html",
-    "main.fd2d455b.css.map": "/Hetuv21/hv-prot.git%20/static/css/main.fd2d455b.css.map",
-    "main.4bc8d4ce.js.map": "/Hetuv21/hv-prot.git%20/static/js/main.4bc8d4ce.js.map"
+    "main.css": "/Hetuv21/hv-prot/static/css/main.fd2d455b.css",
+    "main.js": "/Hetuv21/hv-prot/static/js/main.4bc8d4ce.js",
+    "index.html": "/Hetuv21/hv-prot/index.html",
+    "main.fd2d455b.css.map": "/Hetuv21/hv-prot/static/css/main.fd2d455b.css.map",
+    "main.4bc8d4ce.js.map": "/Hetuv21/hv-prot/static/js/main.4bc8d4ce.js.map"
   },
   "entrypoints": [
     "static/css/main.fd2d455b.css",
