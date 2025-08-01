@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/hv-prot/static/css/main.678a7e2a.css",
-    "main.js": "/hv-prot/static/js/main.5d961bc4.js",
+    "main.css": "/hv-prot/static/css/main.e0008696.css",
+    "main.js": "/hv-prot/static/js/main.692b7a12.js",
     "index.html": "/hv-prot/index.html",
-    "main.678a7e2a.css.map": "/hv-prot/static/css/main.678a7e2a.css.map",
-    "main.5d961bc4.js.map": "/hv-prot/static/js/main.5d961bc4.js.map"
+    "main.e0008696.css.map": "/hv-prot/static/css/main.e0008696.css.map",
+    "main.692b7a12.js.map": "/hv-prot/static/js/main.692b7a12.js.map"
   },
   "entrypoints": [
-    "static/css/main.678a7e2a.css",
-    "static/js/main.5d961bc4.js"
+    "static/css/main.e0008696.css",
+    "static/js/main.692b7a12.js"
   ]
 }
