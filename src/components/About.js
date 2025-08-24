@@ -66,30 +66,59 @@ const About = () => {
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-blue-400 to-teal-400 rounded-full blur-2xl opacity-20 animate-pulse animation-delay-2000"></div>
               
               {/* Photo container */}
-              <div className="relative bg-gradient-to-br from-teal-500 to-cyan-500 p-1 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500">
+              <div className="relative bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 p-1 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500">
                 <div className="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden">
                   <div className="relative">
                     <img 
-                      src="https://ui-avatars.com/api/?name=Student+Developer&background=14b8a6&color=fff&size=256"
-                      alt="Your Name"
-                      className="w-full h-80 object-cover"
+                      src={process.env.PUBLIC_URL + '/mm3.jpg'}
+                      alt="Het Vyas - Profile Photo"
+                      className="w-full h-80 object-cover object-center hover:scale-105 transition-transform duration-700"
+                      style={{
+                        objectPosition: 'center 25%' // Adjust this to crop the photo properly
+                      }}
+                      onError={(e) => {
+                        console.error('Image failed to load:', e.target.src);
+                        // Try alternative path
+                        if (!e.target.dataset.retried) {
+                          e.target.dataset.retried = 'true';
+                          e.target.src = process.env.PUBLIC_URL + '/_64A8812.JPG';
+
+                          return;
+                        }
+                 
+
+                        // Show fallback content
+                        e.target.style.display = 'none';
+                        const fallbackDiv = document.createElement('div');
+                        fallbackDiv.className = 'w-full h-80 bg-gradient-to-br from-purple-200 to-pink-200 dark:from-purple-800 dark:to-pink-800 flex items-center justify-center';
+                        fallbackDiv.innerHTML = `
+                          <div class="text-center text-gray-600 dark:text-gray-300">
+                            <div class="text-6xl mb-4">📸</div>
+                            <div class="text-lg font-semibold">Photo Loading Issue</div>
+                            <div class="text-sm">Check console for details</div>
+                          </div>
+                        `;
+                        e.target.parentNode.appendChild(fallbackDiv);
+                      }}
+                      loading="eager"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
                   <div className="p-8 text-center">
                     <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
-                      Your Name
+                      Het Vyas
                     </h3>
-                    <p className="text-teal-600 dark:text-teal-400 font-medium mb-4">
+                    <p className="text-purple-600 dark:text-purple-400 font-medium mb-4">
                       IT Graduate | B.Tech Student | Developer
                     </p>
                     <div className="flex justify-center space-x-4">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-teal-600 dark:text-teal-400">2025</div>
+                        <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">2025</div>
                         <div className="text-sm text-gray-600 dark:text-gray-400">Diploma</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-teal-600 dark:text-teal-400">2nd Yr</div>
+                        <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">2nd Yr</div>
                         <div className="text-sm text-gray-600 dark:text-gray-400">B.Tech</div>
                       </div>
                     </div>

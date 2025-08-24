@@ -16,6 +16,64 @@ code {
         monospace;
 }
 
+/* Custom animations for navigation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(136, 58, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(136, 58, 255, 0.6);
+  }
+}
+
+/* Navigation bar enhancements */
+.nav-glass {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.nav-glass-dark {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.nav-glass-light {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Theme transition enhancements */
+.theme-transition {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-transition * {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 
 @layer base {

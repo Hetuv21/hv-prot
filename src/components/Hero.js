@@ -88,7 +88,7 @@ const Hero = () => {
               Hi, I'm
             </span>
             <span className="block bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 dark:from-cyan-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent animate-slide-in-right text-shadow-lg text-center">
-              Your Name
+              Het Vyas
             </span>
           </h1>
           

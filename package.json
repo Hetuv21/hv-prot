@@ -1,9 +1,10 @@
 {
-  "homepage": "https://github.com/Hetuv21/hv-prot.git ",
+  "homepage": "https://hetuv21.github.io/hv-prot",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^5.0.1",
     "@radix-ui/react-accordion": "^1.2.8",
     "@radix-ui/react-alert-dialog": "^1.1.11",
@@ -55,14 +56,13 @@
     "vaul": "^1.1.2",
     "zod": "^3.24.4"
   },
- "scripts": {
-  "start": "craco start",
-  "build": "craco build",
-  "test": "craco test",
-  "predeploy": "craco build",
-  "deploy": "gh-pages -d build"
-}
-,
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "predeploy": "craco build",
+    "deploy": "gh-pages -d build"
+  },
   "browserslist": {
     "production": [
       ">0.2%",

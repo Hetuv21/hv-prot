@@ -4,6 +4,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { useToast } from '../hooks/use-toast';
+import { sendEmail } from '../services/emailService';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,20 +27,38 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
+    try {
+      const result = await sendEmail(formData);
+      
+      if (result.success) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        
+        // Clear form on success
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        toast({
+          title: "Failed to send message",
+          description: result.message || "Please try again later or contact me directly.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive"
+      });
+    }
+    
     setIsSubmitting(false);
   };
 

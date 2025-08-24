@@ -35,7 +35,7 @@ module.exports = {
             '**/build/**',
             '**/dist/**',
             '**/coverage/**',
-            '**/public/**',
+            // Removed '**/public/**' so images can be served properly
           ],
         };
       }
