@@ -70,7 +70,7 @@ const About = () => {
                 <div className="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden">
                   <div className="relative">
                     <img 
-                      src={process.env.PUBLIC_URL + '/mm3.jpg'}
+                      src={'/_64A8812.JPG'}
                       alt="Het Vyas - Profile Photo"
                       className="w-full h-80 object-cover object-center hover:scale-105 transition-transform duration-700"
                       style={{
@@ -81,7 +81,7 @@ const About = () => {
                         // Try alternative path
                         if (!e.target.dataset.retried) {
                           e.target.dataset.retried = 'true';
-                          e.target.src = process.env.PUBLIC_URL + '/_64A8812.JPG';
+                          e.target.src =  '/_64A8812.JPG';
 
                           return;
                         }
