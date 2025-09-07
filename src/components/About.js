@@ -81,7 +81,7 @@ const About = () => {
                         // Try alternative path
                         if (!e.target.dataset.retried) {
                           e.target.dataset.retried = 'true';
-                          e.target.src =  '/_64A8812.JPG';
+                          e.target.src =  '/public/_64A8812.JPG';
 
                           return;
                         }
